@@ -1,0 +1,68 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ProyectoAutoescuela.MainWindow"
+        Title="ProyectoAutoescuela">
+    <!-- Panel principal -->
+    <Panel>
+        <!-- Panel visible por defecto -->
+        <Panel Name="cuadro" IsVisible="True">
+            <!-- StackPanel para organizar elementos verticalmente -->
+            <StackPanel Margin="56,20,0,0">
+        <Grid ColumnDefinitions="Auto,*,*">
+        <Label Name="txcodigo" Grid.Column="1">Codigo:</Label>
+        <TextBox Name="tbCodigo" Width="120" Grid.Column="2" Margin="0,0,620,0" ></TextBox>
+            </Grid>
+          
+        
+        <Grid ColumnDefinitions="Auto,*,*" Margin="0,20,0,0">
+            <Label Name="txNombre" Grid.Column="1">Nombre:</Label>
+            <TextBox Name="tbNombre" Width="120" Grid.Column="2" Margin="0,0,620,0" ></TextBox>
+        </Grid>
+        
+        <Grid ColumnDefinitions="Auto,*,*" Margin="0,20,0,0">
+            <Label Name="txTipoPermiso" Grid.Column="1">Tipo Permiso:</Label>
+            <TextBox Name="tbTipo" Width="120" Grid.Column="2" Margin="0,0,620,0" ></TextBox>
+        </Grid>
+        
+        <Grid ColumnDefinitions="Auto,*,*" Margin="0,20,0,0">
+            <Label Name="txGastos" Grid.Column="1">Gastos Totales:</Label>
+            <TextBox Name="tbGasto" Width="120" Grid.Column="2" Margin="0,0,620,0" ></TextBox>
+        </Grid>
+        
+        <Grid ColumnDefinitions="Auto,*,*" Margin="0,20,0,0">
+            <Label Name="txMatricula" Grid.Column="1">Matricula caducada?</Label>
+            <TextBox Name="tbMatricula" Width="120" Grid.Column="2" Margin="0,0,620,0" ></TextBox>
+        </Grid>
+                <!-- Organización de botones y Checkbox -->
+
+        
+        <CheckBox Name="chAprobado" Margin="384,-26,0,0">Aprobado</CheckBox>
+        <Button Name="btnAnterior" Margin="0,64,0,0" Click="BtnAnterior_OnClick">Anterior</Button>
+        <Button Name="btnSiguiente" Margin="223,-26,0,0" Click="BtnSiguiente_OnClick">Siguiente</Button>
+        <Button Name="btnEliminar" Click="BtnEliminar_OnClick">Eliminar</Button>
+        <Button Name="btnModificar" Margin="223,-23,0,0" Click="BtnModificar_OnClick">Modificar</Button>
+        <Button Name="btnConfirmar" Margin="0,0,0,0" Click="BtnConfirmar_OnClick">Confirmar</Button>
+        <TextBox Name="etiquetaRegistros" Margin="650,-23,0,0" IsEnabled="False"></TextBox>
+        <Button Name="btnSeleccionarImagen" Margin="362,-23,0,0" Click="BtnSeleccionarImagen_OnClick">Seleccionar Imagen</Button>
+        <Button Name="btnCrear" Margin="223,-28,0,0" Click="BtnCrear_OnClick">Crear</Button>
+        <Button Name="btnConfirmarCambios" Click="BtnConfirmarCambios_OnClick">Confirmar Cambios</Button>
+        <Button Name="btnGuardar" Margin="222,-30,0,0" Click="BtnGuardar_OnClick">Guardar</Button>
+        <Image Name="imagen"></Image>    
+        
+        <Grid ColumnDefinitions="Auto, *, *,0"></Grid>
+    </StackPanel>
+            </Panel>
+        <!-- Panel oculto por defecto para el uso del messagebox-->
+        <Panel Name="dialogo" IsVisible="False">
+            <StackPanel>
+                <TextBox Name="textodialogo"></TextBox>
+                <Button Name="btnVolver" Click="BtnVolver_OnClick">Volver</Button>
+            </StackPanel>
+        </Panel>
+    </Panel>
+    
+ 
+</Window>
